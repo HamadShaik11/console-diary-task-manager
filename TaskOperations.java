@@ -157,7 +157,7 @@ public class TaskOperations {
 
     private BiFunction<List<Task>, String, List<Task>> filterByStatus = (taskList, statusString) -> {
         List<Task> filteredListByPriority = taskList.stream()
-                .filter(e -> e.status.toLowerCase().equals(statusString))
+                .filter(e -> e.status.toLowerCase().equals(statusString.toLowerCase()))
                 .collect(Collectors.toList());
         return filteredListByPriority;
     };
